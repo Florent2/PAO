@@ -1,4 +1,6 @@
 class PaoRecordsController < ApplicationController
+  before_filter :authenticate
+
   def index
     @pao_records = PaoRecord.by_pao_number
   end
@@ -41,6 +43,12 @@ class PaoRecordsController < ApplicationController
   end
 
   private
+
+  def authenticate
+    authenticate_or_request_with_http_basic('PAO') do |login, password|
+      login == ENV['LOGIN']
+    end
+  end
 
   def pao_record_params
     params.require(:pao_record).permit!
