@@ -9,7 +9,7 @@ table.table
   tbody
     - @pao_records.each do |pao_record|
       tr
-        td= pao_record.pao_number
+        td= link_to pao_record.pao_number, pao_record
         td= pao_record.pao_person
         td= pao_record.pao_action
         td= pao_record.pao_object

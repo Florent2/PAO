@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419063519) do
+ActiveRecord::Schema.define(version: 20140419080433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140419063519) do
     t.string   "pao_object"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "pao_image_url"
   end
 
 end

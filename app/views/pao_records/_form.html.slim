@@ -7,4 +7,6 @@
     = f.text_field :pao_action, class: "form-control", placeholder: "Action"
   .form-group
     = f.text_field :pao_object, class: "form-control", placeholder: "Object"
+  .form-group
+    = f.url_field :pao_image_url, class: "form-control", placeholder: "Image URL"
   = f.submit "Save", class: "btn btn-primary"

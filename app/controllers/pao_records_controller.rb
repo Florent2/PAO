@@ -17,6 +17,10 @@ class PaoRecordsController < ApplicationController
     end
   end
 
+  def show
+    @pao_record = PaoRecord.find params[:id]
+  end
+
   def edit
     @pao_record = PaoRecord.find params[:id]
   end
