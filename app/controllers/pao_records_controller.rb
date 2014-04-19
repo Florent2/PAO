@@ -35,6 +35,11 @@ class PaoRecordsController < ApplicationController
     end
   end
 
+  def random
+    @pao_record = PaoRecord.order('random()').first
+    @displayed_info = @pao_record[%w(pao_number pao_person pao_action pao_object).sample]
+  end
+
   private
 
   def pao_record_params
