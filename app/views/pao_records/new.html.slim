@@ -1,12 +1,2 @@
 h1 New PAO
-
-= form_for @pao_record, html: { class: "form-inline" } do |f|
-  .form-group
-    = f.text_field :pao_number, class: "form-control", placeholder: "Nb", size: 2, autofocus: true
-  .form-group
-    = f.text_field :pao_person, class: "form-control", placeholder: "Person"
-  .form-group
-    = f.text_field :pao_action, class: "form-control", placeholder: "Action"
-  .form-group
-    = f.text_field :pao_object, class: "form-control", placeholder: "Object"
-  = f.submit "Create", class: "btn btn-primary"
+= render "form"

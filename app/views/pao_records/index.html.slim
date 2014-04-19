@@ -5,6 +5,7 @@ table.table
       th Person
       th Action
       th Object
+      th Edit
   tbody
     - @pao_records.each do |pao_record|
       tr
@@ -12,4 +13,5 @@ table.table
         td= pao_record.pao_person
         td= pao_record.pao_action
         td= pao_record.pao_object
+        td= link_to "edit", edit_pao_record_path(pao_record)
 

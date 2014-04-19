@@ -17,6 +17,20 @@ class PaoRecordsController < ApplicationController
     end
   end
 
+  def edit
+    @pao_record = PaoRecord.find params[:id]
+  end
+
+  def update
+    @pao_record = PaoRecord.find params[:id]
+    if @pao_record.update_attributes pao_record_params
+      redirect_to :pao_records, notice: "PAO successfully updated"
+    else
+      flash.now[:error] = "One or more errors prevented the PAO update: #{@pao_record.errors.full_messages.join ', '}"
+      render :edit
+    end
+  end
+
   private
 
   def pao_record_params
