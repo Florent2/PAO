@@ -1,0 +1,15 @@
+table.table
+  thead
+    tr
+      th Number
+      th Person
+      th Action
+      th Object
+  tbody
+    - @pao_records.each do |pao_record|
+      tr
+        td= pao_record.pao_number
+        td= pao_record.pao_person
+        td= pao_record.pao_action
+        td= pao_record.pao_object
+

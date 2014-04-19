@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pao_number: 1
+  pao_person: MyString
+  pao_action: MyString
+  pao_object: MyString
+
+two:
+  pao_number: 1
+  pao_person: MyString
+  pao_action: MyString
+  pao_object: MyString
